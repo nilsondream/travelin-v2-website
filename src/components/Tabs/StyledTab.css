@@ -1,0 +1,32 @@
+.tab-list {
+    padding-left: 7vw;
+}
+
+.tab-list-item {
+    cursor: pointer;
+    display: inline-block;
+    color: #999999;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: .3s all ease;
+}
+
+.tab-list-item:hover {
+    color: #000;
+    transition: .3s all ease;
+}
+
+.tab-list-active {
+    color: #000;
+    background: #eee;
+    /*border: 1px solid #ddd;*/
+}
+
+@media (max-width: 600px) {
+    .tab-list {
+        padding-left: 20px;
+    }
+}

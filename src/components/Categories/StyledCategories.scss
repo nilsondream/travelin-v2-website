@@ -1,0 +1,126 @@
+.category-container {
+    padding: 50px 7vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    .destino-item {
+        cursor: pointer;
+        //position: relative;
+        //border-radius: 10px;
+        //border: 1px solid #ddd;
+        transition: .3s ease-in-out;
+        //padding: 5px;
+        //width: 285px;
+
+        .destino-img {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .3s ease-in-out;
+                z-index: 1;
+            }
+        }
+
+        .destino-data {
+            //color: #fff;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            flex-direction: column;
+
+            .data-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 10px;
+
+                h2 {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 2.5px;
+
+                    svg {
+                        font-size: 12.5px;
+                    }
+                }
+            }
+
+            .data-bottom {
+                /*display: flex;
+                flex-direction: column;
+                gap: 5px;*/
+
+                p {
+                    font-size: 15px;
+                }
+
+                span {
+                    font-size: 15px;
+                    //font-weight: 800;
+                    /*border-radius: 5px;
+                    border: 1px solid #000;
+                    padding: 2px 5px;*/
+                }
+            }
+        }
+
+
+        &:hover img {
+            transition: .3s ease-in-out;
+            transform: scale(1.1);
+        }
+
+        /*&:hover {
+            transition: .3s ease-in-out;
+            transform: translatey(-7px);
+            box-shadow: 0.5px 0.5px 30px rgba(0, 0, 0, 0.2);
+        }*/
+    }
+}
+
+@media (max-width: 600px) {
+    .category-container {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+
+        .destino-item {
+            .destino-img {
+                height: 170px;
+            }
+
+            .destino-data {
+                padding: 10px 0;
+
+                .data-top {
+                    
+                    p {
+                        font-size: 13px;
+
+                        svg {
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                .data-bottom {
+
+                    p, span{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
