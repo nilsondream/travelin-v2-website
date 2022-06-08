@@ -24,19 +24,19 @@ const Experiences = () => {
 
     return (
         <>
-            <div className="experience-home">
+            <div className='experience-home'>
                 <h1 ref={titleexperienceref}>Actividades que podrás realizar en grupo con tus amigos</h1>
                 <div className='experience-grid'>
-                    <div className="experience-item" ref={experienceref1}>
-                        <img src={img1} alt="" />
+                    <div className='experience-item' ref={experienceref1}>
+                        <img src={img1} alt='' />
                         <div className='item-data'>
                             <h1>Campings<br />Tours<br />Comida local<br />Fogatas</h1>
                             <NavLink to={'/tours'}><button className='btn-styled-3'>Explorar tours</button></NavLink>
                         </div>
                     </div>
 
-                    <div className="experience-item" ref={experienceref2}>
-                        <img src={img2} alt="" />
+                    <div className='experience-item' ref={experienceref2}>
+                        <img src={img2} alt='' />
                         <div className='item-data'>
                             <h1>Fotografías y videos para todas tus redes sociales.</h1>
                             <NavLink to={'/experiences'}><button className='btn-styled-4'>Experiencias</button></NavLink>

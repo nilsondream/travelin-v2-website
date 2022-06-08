@@ -64,7 +64,7 @@
 
             .landing-top {
                 padding-left: 20px;
-                padding-top: 100px;
+                padding-top: 80px;
 
                 h1 {
                     font-size: 50px;
@@ -73,7 +73,7 @@
             }
 
             .landing-bottom {
-                padding: 0 20px 75px 20px;
+                padding: 0 20px 70px 20px;
 
                 a {
                     display: none;
@@ -85,6 +85,10 @@
                     p {
                         font-size: 17px;
                         font-weight: 500;
+                    }
+
+                    button {
+                        width: 100%;
                     }
                 }
             }

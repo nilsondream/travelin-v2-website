@@ -26,7 +26,7 @@ const Recomend = () => {
             <div className="destinos-home">
                 <h1 ref={titlerecomendref}>Destinos más recomendados</h1>
                 <div className="destinos-content" ref={recomendref}>
-                    <Splide options={{ perPage: 4, perMove: 1, breakpoints: { 640: { perPage: 2, gap: 10 } }, arrows: false, pagination: false, drag: 'free', gap: 16, type: 'loop', autoplay: true }}>
+                    <Splide options={{ perPage: 4, perMove: 1, breakpoints: { 640: { perPage: 1, gap: 20 } }, arrows: false, pagination: false, drag: 'free', gap: 16, type: 'loop', autoplay: true }}>
                         {destinos.map((destino, index) => {
                             return (
                                 <SplideSlide key={index}>

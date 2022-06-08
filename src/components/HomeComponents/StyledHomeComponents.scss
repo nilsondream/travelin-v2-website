@@ -70,19 +70,19 @@
             margin-top: 25px;
 
             .destino-item {
-                height: 200px;
+                height: 350px;
 
                 .destino-data {
-                    padding: 10px;
+                    padding: 20px;
 
                     h2 {
-                        font-size: 17px;
-                        line-height: 17px;
+                        font-size: 25px;
+                        line-height: 25px;
                     }
 
                     p {
-                        margin-top: 7px;
-                        font-size: 14px;
+                        margin-top: 5px;
+                        font-size: 17px;
                     }
                 }
             }
@@ -137,6 +137,7 @@
 @media(max-width: 600px) {
     .experience-home {
         padding: 50px 20px;
+        
         h1 {
             font-size: 30px;
             line-height: 30px;
