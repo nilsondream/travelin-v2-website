@@ -46,7 +46,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <span />
-                    <p>© 2022 Travelin · Tours & Viajes | Todos Los Derechos Reservados</p>
+                    <p>© 2022 Travelin · Todos Los Derechos Reservados</p>
                 </div>
             </div>
         </>
