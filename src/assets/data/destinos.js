@@ -63,7 +63,7 @@ const destinos = [
         id: 5,
         slug: 'montaña-7-colores',
         name: 'Montaña de 7 colores',
-        place: 'Quispicanchi',
+        place: 'Cusco',
         category: 'Montaña',
         agency: 'Agencia 5',
         slug_agency: 'agencia-5',

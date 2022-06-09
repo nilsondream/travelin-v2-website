@@ -5,7 +5,7 @@ import ScrollToTop from '../../components/ScrollToTop'
 import Recomend from '../../components/HomeComponents/Recomend';
 import img1 from '../../assets/images/hero-01.webp'
 import './StyledHome.scss'
-import Experiences from '../../components/HomeComponents/Experiences';
+import Activities from '../../components/HomeComponents/Activities';
 
 const Home = () => {
 
@@ -53,7 +53,7 @@ const Home = () => {
 
                     <Recomend />
 
-                    <Experiences />
+                    <Activities />
 
                 </div>
             </motion.div>

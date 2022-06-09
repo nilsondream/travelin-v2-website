@@ -3,10 +3,11 @@ import gsap, { Expo } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
-import { MdOutlinePlace } from "react-icons/md";
+import { MdOutlinePlace } from 'react-icons/md';
 import destinos from '../../assets/data/destinos'
 import Gradient from '../Gradient';
 import './StyledHomeComponents.scss'
+import { NavLink } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger)
 
 const Recomend = () => {
@@ -23,17 +24,23 @@ const Recomend = () => {
 
     return (
         <>
-            <div className="destinos-home">
-                <h1 ref={titlerecomendref}>Destinos más recomendados</h1>
-                <div className="destinos-content" ref={recomendref}>
+            <div className='destinos-home'>
+                <div className='recomend-title' ref={titlerecomendref}>
+                    <div className='title-grid'>
+                        <h1>Destinos más recomendados</h1>
+                        <NavLink to={'/destinos'}>Ver todo</NavLink>
+                    </div>
+                    <p>Explora precios, califíca la experiencia del viaje, recomienda los mismos y más.</p>
+                </div>
+                <div className='destinos-content' ref={recomendref}>
                     <Splide options={{ perPage: 4, perMove: 1, breakpoints: { 640: { perPage: 1, gap: 20 } }, arrows: false, pagination: false, gap: 16, type: 'loop', autoplay: true }}>
                         {destinos.map((destino, index) => {
                             return (
                                 <SplideSlide key={index}>
-                                    <div className="destino-item">
+                                    <div className='destino-item'>
                                         <img src={destino.img} alt={destino.name} />
                                         <Gradient />
-                                        <div className="destino-data">
+                                        <div className='destino-data'>
                                             <h2>{destino.name}</h2>
                                             <p><MdOutlinePlace />{destino.place}</p>
                                         </div>

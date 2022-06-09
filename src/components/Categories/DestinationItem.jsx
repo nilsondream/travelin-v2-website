@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BsStar } from "react-icons/bs";
+import { BsStarFill } from "react-icons/bs";
 
 const DestinationItem = ({ id, slug, name, slug_agency, agency, price, rating, img }) => {
     return (
@@ -13,7 +13,7 @@ const DestinationItem = ({ id, slug, name, slug_agency, agency, price, rating, i
                     <div className="destino-data">
                         <div className="data-top">
                             <h2>{name}</h2>
-                            <p>{rating} <BsStar /></p>
+                            <p>{rating} <BsStarFill /></p>
                         </div>
                         <div className="data-bottom">
                             <p>{agency}</p>
