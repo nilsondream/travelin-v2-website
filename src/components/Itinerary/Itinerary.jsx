@@ -6,7 +6,6 @@ import { BsStarFill, BsClock, BsChevronLeft } from 'react-icons/bs';
 import { GrGroup } from 'react-icons/gr';
 import { AiOutlineCar } from 'react-icons/ai';
 import ScrollToTop from '../ScrollToTop';
-import Tabs from '../Tabs/Tabs';
 import './StyledItinerary.scss'
 
 const Itinerary = () => {
@@ -78,24 +77,7 @@ const Itinerary = () => {
                             </div>
                         </div>
                         <div className="destination-buy">
-                            <Tabs>
-                                <div label="Tarjeta">
-                                    <p>Pago con tarjeta</p>
-                                    <button className='btn-styled-5'>Comprar</button>
-                                </div>
-                                <div label="Depósito">
-                                    <p>Depósito en efectivo</p>
-                                    <button className='btn-styled-5'>Comprar</button>
-                                </div>
-                                <div label="Banca online">
-                                    <p>Banca online</p>
-                                    <button className='btn-styled-5'>Comprar</button>
-                                </div>
-                                <div label="Banca movil">
-                                    <p>Banca movil</p>
-                                    <button className='btn-styled-5'>Comprar</button>
-                                </div>
-                            </Tabs>
+                            <button className='btn-styled-5'>Comprar destino</button>
                         </div>
                     </div>
                 </div>

@@ -95,15 +95,15 @@ button {
     padding: 12px 40px;
     //background: linear-gradient(135deg, #7F7FD5, #91EAE4);
     background: linear-gradient(135deg, #F27121, #E94057, #8A2387);
-    border: 1px solid transparent;
+    //border: 1px solid transparent;
     border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
     //transition: .3s linear;
 
     &:hover {
-        border: 1px solid #000;
-        background: transparent;
+        //border: 1px solid #000;
+        background: #ddd;
         color: black;
     }
 }
