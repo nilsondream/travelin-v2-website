@@ -25,13 +25,16 @@ const Activities = () => {
     return (
         <>
             <div className='activities-home'>
-                <h1 ref={titleactivitiesref}>Actividades que podrás realizar en grupo con tus amigos</h1>
+                <div className='activities-title' ref={titleactivitiesref}>
+                    <h1>Actividades que podrás realizar en grupo con tus amigos</h1>
+                    <p>Busca y sugiere las mejoras rutas para ti, anímate a ser el arquitecto de tus propias aventuras.</p>
+                </div>
                 <div className='activities-grid'>
                     <div className='activities-item' ref={activitiesref1}>
                         <img src={img1} alt='' />
                         <div className='item-data'>
                             <h1>Rutas<br />Campings<br />Fogatas<br />Comida local</h1>
-                            <NavLink to={'/tours'}><button className='btn-styled-3'>Explorar tours</button></NavLink>
+                            <NavLink to={'/tours'}><button className='btn-styled-2'>Explorar tours</button></NavLink>
                         </div>
                     </div>
 

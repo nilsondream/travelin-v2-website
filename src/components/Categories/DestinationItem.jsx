@@ -1,23 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BsStarFill } from "react-icons/bs";
+import { BsHeart } from 'react-icons/bs';
 
-const DestinationItem = ({ id, slug, name, slug_agency, agency, price, rating, img }) => {
+const DestinationItem = ({ id, slug, name, place, slug_agency, agency, price, img }) => {
     return (
         <>
             <Link to={`/${slug_agency}/${slug}`}>
-                <div className="destino-item" key={id}>
-                    <div className="destino-img">
+                <div className='destino-item' key={id}>
+                    <div className='destino-img'>
                         <img src={img} alt={name} />
+                        <span><BsHeart /></span>
                     </div>
-                    <div className="destino-data">
-                        <div className="data-top">
-                            <h2>{name}</h2>
-                            <p>{rating} <BsStarFill /></p>
+                    <div className='destino-data'>
+                        <div className='data-top'>
+                            <p>{name}, {place}</p>
                         </div>
-                        <div className="data-bottom">
+                        <div className='data-center'>
                             <p>{agency}</p>
-                            <span>{price}</span>
+                        </div>
+                        <div className='data-bottom'>
+                            <p>s/ {price}</p>
                         </div>
                     </div>
                 </div>
