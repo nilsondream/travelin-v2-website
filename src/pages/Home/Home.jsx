@@ -22,7 +22,7 @@ const Home = () => {
     useEffect(() => {
         timeline_home.from([img], { opacity: 0, scale: 1.5, duration: 1.5, ease: Expo.easeOut });
         timeline_home.from([title1, title2, title3], { opacity: 0, y: 70, duration: 1, delay: -.75, ease: Expo.easeOut, stagger: { amount: .25 } });
-        timeline_home.from([supp, text, btn], { opacity: 0, x: -50, duration: 1, delay: -.75, ease: Expo.easeOut, stagger: { amount: .25 } });
+        timeline_home.from([supp, text, btn], { opacity: 0, y: 50, duration: 1, delay: -.75, ease: Expo.easeOut, stagger: { amount: .25 } });
     });
 
     return (

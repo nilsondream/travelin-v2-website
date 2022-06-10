@@ -6,6 +6,7 @@ import Tabs from '../../components/Tabs/Tabs'
 import All from '../../components/Categories/All';
 import Cascadas from '../../components/Categories/Cascadas';
 import Montañas from '../../components/Categories/Montañas';
+import Ruinas from '../../components/Categories/Ruinas';
 
 const Destinations = () => {
     return (
@@ -25,6 +26,9 @@ const Destinations = () => {
                         </div>
                         <div label="Montañas">
                             <Montañas />
+                        </div>
+                        <div label="Ruinas">
+                            <Ruinas />
                         </div>
                     </Tabs>
                 </div>

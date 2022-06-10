@@ -1,5 +1,17 @@
+.tabs {
+    margin: 0 7vw;
+}
+
 .tab-list {
-    padding-left: 7vw;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tab-list::-webkit-scrollbar {
+    display: none;
 }
 
 .tab-list-item {
@@ -8,14 +20,12 @@
     color: #000;
     font-weight: 700;
     border-radius: 10px;
-    margin-right: 7px;
-    padding: 5px 15px;
-    transition: .3s ease;
+    padding: 10px 20px;
+    background: transparent;
 }
 
 .tab-list-item:hover {
     background: #eee;
-    transition: .3s ease;
 }
 
 .tab-list-active {
@@ -28,7 +38,16 @@
 }
 
 @media (max-width: 600px) {
-    .tab-list {
-        padding-left: 20px;
+    .tabs {
+        overflow: hidden;
+        margin: 0 20px;
+    }
+
+    .tab-list-item {
+        background: #eee;
+    }
+
+    .tab-list-active {
+        background: linear-gradient(135deg, #8E2DE2, #4A00E0);
     }
 }

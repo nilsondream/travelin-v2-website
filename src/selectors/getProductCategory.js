@@ -2,7 +2,7 @@ import destinos from "../assets/data/destinos"
 
 export const getProductCategory = (category) => {
 
-    const validCategory = ['Cascada', 'Montaña'];
+    const validCategory = ['Cascada', 'Montaña', 'Ruina'];
 
     if ( !validCategory.includes(category)) {
         throw new Error(`${category} no es un publisher válido`)

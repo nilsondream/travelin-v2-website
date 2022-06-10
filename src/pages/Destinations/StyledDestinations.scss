@@ -13,8 +13,7 @@
 
 
     .destinations-searchbar {
-        margin-top: -38px;
-        padding-right: 7vw;
+        margin-top: -44px;
         display: flex;
         justify-content: flex-end;
 
@@ -23,7 +22,7 @@
             border-radius: 10px;
             background: #eeeeee;
             width: 350px;
-            padding: 5px 10px;
+            padding: 8px 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,7 +63,6 @@
 
         .destinations-searchbar {
             margin-top: 20px;
-            padding: 0 20px;
             justify-content: flex-start;
 
             form {
