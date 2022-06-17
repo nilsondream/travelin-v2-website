@@ -10,6 +10,7 @@ import Home from './pages/Home/Home'
 import Experiences from './pages/Experiences/Experiences';
 import Itinerary from './components/Itinerary/Itinerary';
 import './style/GlobalStyle.scss'
+import Plan from './pages/Plan/Plan';
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={false}>
                 <Switch location={location} key={location.key}>
                     <Route exact path='/'><Home /></Route>
+                    <Route path='/plan'><Plan /></Route>
                     <Route path='/destinos'><Destinations /></Route>
                     <Route path='/:agency/:slug'><Itinerary /></Route>
                     <Route path='/tours'><Tours /></Route>

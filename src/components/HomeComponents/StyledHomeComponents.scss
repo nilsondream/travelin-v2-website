@@ -16,8 +16,8 @@
 
             a {
                 font-weight: 700;
-                color: #fff;
-                background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+                color: #000;
+                background: #eee;
                 padding: 10px 25px;
                 border-radius: 10px;
 
@@ -115,6 +115,7 @@
                 h1 {
                     font-size: 30px;
                     line-height: 35px;
+                    letter-spacing: -1px;
                 }
 
                 a {
@@ -159,9 +160,10 @@
         h1 {
             font-size: 40px;
             font-weight: 800;
+            letter-spacing: -1px;
             //margin-bottom: 50px;
         }
-        
+
         p {
             margin-top: 10px;
         }

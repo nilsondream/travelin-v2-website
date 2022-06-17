@@ -7,6 +7,7 @@ import img1 from '../../assets/images/hero-01.webp'
 import Activities from '../../components/HomeComponents/Activities';
 import useVH from 'react-vh';
 import './StyledHome.scss'
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 
@@ -42,14 +43,16 @@ const Home = () => {
                         </div>
 
                         <div className='landing-bottom'>
-                            <a href='/' ref={el => supp = el}>travelinsupport@gmail.com</a>
+                            <a className='support-link' href='/' ref={el => supp = el}>travelinsupport@gmail.com</a>
                             <div className='bottom-text'>
                                 <p ref={el => text = el}>
                                     Bienvenido a travelin, registrate y descubre
                                     todas las novedades y beneficios de unirte a
                                     nuestra comunidad.
                                 </p>
-                                <button className='btn-styled-1' ref={el => btn = el}>Planea tu viaje</button>
+                                <NavLink to={'/plan'} ref={el => btn = el}>
+                                    <button className='btn-styled-1'>Planea tu viaje</button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

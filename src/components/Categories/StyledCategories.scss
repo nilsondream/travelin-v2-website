@@ -57,9 +57,24 @@
             flex-direction: column;
 
             .data-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
                 p {
                     font-size: 17px;
                     font-weight: 600;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 2.5px;
+                    font-size: 15px;
+
+                    svg {
+                        font-size: 13px;
+                    }
                 }
             }
 
@@ -75,8 +90,7 @@
                 margin-top: 5px;
 
                 p {
-                    letter-spacing: -1px;
-                    font-weight: 800;
+                    font-weight: 600;
                     font-size: 17px;
                 }
             }

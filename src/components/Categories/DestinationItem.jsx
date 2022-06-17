@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BsHeart } from 'react-icons/bs';
+import { BsHeart, BsStarFill } from 'react-icons/bs';
 
-const DestinationItem = ({ id, slug, name, place, slug_agency, agency, price, img }) => {
+const DestinationItem = ({ id, slug, name, slug_agency, agency, price, img, rating }) => {
     return (
         <>
             <Link to={`/${slug_agency}/${slug}`}>
@@ -13,7 +13,8 @@ const DestinationItem = ({ id, slug, name, place, slug_agency, agency, price, im
                     </div>
                     <div className='destino-data'>
                         <div className='data-top'>
-                            <p>{name}, {place}</p>
+                            <p>{name}</p>
+                            <span>{rating}<BsStarFill /></span>
                         </div>
                         <div className='data-center'>
                             <p>{agency}</p>

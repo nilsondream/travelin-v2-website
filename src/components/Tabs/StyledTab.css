@@ -17,37 +17,29 @@
 .tab-list-item {
     cursor: pointer;
     display: inline-block;
-    color: #000;
+    color: #777;
     font-weight: 700;
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 7px 12px;
     background: transparent;
 }
 
 .tab-list-item:hover {
-    background: #eee;
+    color: #000;
 }
 
 .tab-list-active {
-    color: #fff;
-    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    color: #000;
+    background: #eee;
 }
 
 .tab-list-active:hover {
-    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    background: #eee;
 }
 
 @media (max-width: 600px) {
     .tabs {
         overflow: hidden;
         margin: 0 20px;
-    }
-
-    .tab-list-item {
-        background: #eee;
-    }
-
-    .tab-list-active {
-        background: linear-gradient(135deg, #8E2DE2, #4A00E0);
     }
 }

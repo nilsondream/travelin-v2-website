@@ -19,7 +19,7 @@ const Activities = () => {
         const activities2 = activitiesref2.current;
         gsap.fromTo(titleactivities, { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: Expo.easeOut, scrollTrigger: { trigger: titleactivities } });
         gsap.fromTo(activities1, { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 1, ease: Expo.easeOut, scrollTrigger: { trigger: activities1 } });
-        gsap.fromTo(activities2, { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 1, delay: .2, ease: Expo.easeOut, scrollTrigger: { trigger: activities2 } });
+        gsap.fromTo(activities2, { opacity: 0, y: 150 }, { opacity: 1, y: 0, duration: 1, delay: .1, ease: Expo.easeOut, scrollTrigger: { trigger: activities2 } });
     })
 
     return (
@@ -34,7 +34,7 @@ const Activities = () => {
                         <img src={img1} alt='' />
                         <div className='item-data'>
                             <h1>Rutas<br />Campings<br />Fogatas<br />Comida local</h1>
-                            <NavLink to={'/tours'}><button className='btn-styled-2'>Explorar tours</button></NavLink>
+                            <NavLink to={'/tours'}><button className='btn-styled-3'>Explorar tours</button></NavLink>
                         </div>
                     </div>
 
