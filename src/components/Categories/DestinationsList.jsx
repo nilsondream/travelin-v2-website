@@ -10,9 +10,9 @@ const DestinationsList = ({ category }) => {
 
     const [searchText, setSearchText] = useState('');
     const [destinationsData, setDestinationData] = useState(destinos);
-    useEffect((destinos) => {
+    useEffect(() => {
         if (searchText === '') return;
-        setDestinationData(() =>
+        setDestinationData((destinos) =>
             destinos.filter((destino) =>
                 destino.name.toLowerCase().match(searchText.toLowerCase())
             )
