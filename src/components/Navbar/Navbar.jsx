@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import useModal from 'use-react-modal'
 import { NavLink } from 'react-router-dom'
+import { BiUserCircle } from 'react-icons/bi'
+import { MdClose } from 'react-icons/md'
+import { BsFacebook, BsGoogle } from 'react-icons/bs'
 import { CgMenuRight, CgClose } from 'react-icons/cg'
 import { FiHome, FiMap, FiNavigation, FiCamera } from "react-icons/fi";
 import styled from 'styled-components'
 import './StyledNavbar.scss'
 
 const Navbar = () => {
+
+    const { isOpen, openModal, closeModal, Modal } = useModal({ background: 'rgba(0, 0, 0, 0.5)' });
 
     // open sidebar
     const [sidebar, setSidebar] = useState(false);
@@ -56,12 +62,36 @@ const Navbar = () => {
                         <NavLink exact activeClassName='active' to='/destinos'>Destinos</NavLink>
                         <NavLink activeClassName='active' to='/tours'>Tours</NavLink>
                         <NavLink activeClassName='active' to='/experiences'>Experiencias</NavLink>
-                        <button><CgMenuRight /></button>
+                        <BiUserCircle onClick={openModal} />
                     </div>
 
                     <div className='btn-mobile' onClick={showSidebar}><CgMenuRight /></div>
                 </motion.div>
             </Nav>
+
+            <div className="login-modal">
+                {
+                    isOpen && (
+                        <Modal>
+                            <div className="login">
+                                <span><MdClose onClick={closeModal} /></span>
+                                <h1>Bienvenido a Travelin</h1>
+                                <button><BsFacebook /> Iniciar sesión con Facebook</button>
+                                <button><BsGoogle /> Iniciar sesión con Google</button>
+                                <p className='separation'>ó</p>
+                                <form>
+                                    <input type="text" placeholder="Email" />
+                                </form>
+                                <form>
+                                    <input type="text" placeholder="Contraseña" />
+                                </form>
+
+                                <h3>Iniciar sesión</h3>
+                            </div>
+                        </Modal>
+                    )
+                }
+            </div>
 
             <div className={sidebar ? 'sidebar-mobile sidebar-mobile-active' : 'sidebar-mobile'}>
                 <div className='btn-mobile-close' onClick={showSidebar}><CgClose /></div>
