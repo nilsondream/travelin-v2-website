@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import useModal from 'use-react-modal'
 import { NavLink } from 'react-router-dom'
 import { BiUserCircle } from 'react-icons/bi'
 import { MdClose } from 'react-icons/md'
@@ -13,7 +12,9 @@ import './StyledNavbar.scss'
 
 const Navbar = () => {
 
-    const { isOpen, openModal, closeModal, Modal } = useModal({ background: 'rgba(0, 0, 0, 0.5)' });
+    // open modal
+    const [modal, setModal] = useState(false);
+    const openModal = () => setModal(!modal);
 
     // open sidebar
     const [sidebar, setSidebar] = useState(false);
@@ -69,28 +70,22 @@ const Navbar = () => {
                 </motion.div>
             </Nav>
 
-            <div className="login-modal">
-                {
-                    isOpen && (
-                        <Modal>
-                            <div className="login">
-                                <span><MdClose onClick={closeModal} /></span>
-                                <h1>Bienvenido a Travelin</h1>
-                                <button><BsFacebook /> Iniciar sesión con Facebook</button>
-                                <button><BsGoogle /> Iniciar sesión con Google</button>
-                                <p className='separation'>ó</p>
-                                <form>
-                                    <input type="text" placeholder="Email" />
-                                </form>
-                                <form>
-                                    <input type="text" placeholder="Contraseña" />
-                                </form>
+            <div className={modal ? 'login-modal login-modal-active' : 'login-modal'}>
+                <div className="login">
+                    <span><MdClose onClick={openModal} /></span>
+                    <h1>Bienvenido a Travelin</h1>
+                    <button><BsFacebook /> Iniciar sesión con Facebook</button>
+                    <button><BsGoogle /> Iniciar sesión con Google</button>
+                    <p className='separation'>ó</p>
+                    <form>
+                        <input type="text" placeholder="Email" />
+                    </form>
+                    <form>
+                        <input type="text" placeholder="Contraseña" />
+                    </form>
 
-                                <h3>Iniciar sesión</h3>
-                            </div>
-                        </Modal>
-                    )
-                }
+                    <h3>Iniciar sesión</h3>
+                </div>
             </div>
 
             <div className={sidebar ? 'sidebar-mobile sidebar-mobile-active' : 'sidebar-mobile'}>
