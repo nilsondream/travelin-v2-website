@@ -51,7 +51,7 @@ const Home = () => {
                                     nuestra comunidad.
                                 </p>
                                 <NavLink to={'/plan'} ref={el => btn = el}>
-                                    <button className='btn-styled-1'>Planea tu viaje</button>
+                                    <button className='btn-styled-1'>Empezar a planificar</button>
                                 </NavLink>
                             </div>
                         </div>

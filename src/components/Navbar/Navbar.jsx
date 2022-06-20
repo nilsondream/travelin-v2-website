@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { BiUserCircle } from 'react-icons/bi'
 import { MdClose } from 'react-icons/md'
-import { BsFacebook, BsGoogle } from 'react-icons/bs'
+import { FcGoogle } from "react-icons/fc";
+import { BsFacebook } from 'react-icons/bs'
 import { CgMenuRight, CgClose } from 'react-icons/cg'
 import { FiHome, FiMap, FiNavigation, FiCamera } from "react-icons/fi";
 import styled from 'styled-components'
@@ -61,6 +62,7 @@ const Navbar = () => {
 
                     <div className='nav-right'>
                         <NavLink exact activeClassName='active' to='/destinos'>Destinos</NavLink>
+                        <NavLink exact activeClassName='active' to='/plan'>Planea tu viaje</NavLink>
                         <NavLink activeClassName='active' to='/tours'>Tours</NavLink>
                         <NavLink activeClassName='active' to='/experiences'>Experiencias</NavLink>
                         <BiUserCircle onClick={openModal} />
@@ -75,7 +77,7 @@ const Navbar = () => {
                     <span><MdClose onClick={openModal} /></span>
                     <h1>Bienvenido a Travelin</h1>
                     <button><BsFacebook /> Iniciar sesión con Facebook</button>
-                    <button><BsGoogle /> Iniciar sesión con Google</button>
+                    <button><FcGoogle /> Iniciar sesión con Google</button>
                     <p className='separation'>ó</p>
                     <form>
                         <input type="text" placeholder="Email" />
